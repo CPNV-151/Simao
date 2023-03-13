@@ -14,6 +14,9 @@ if (isset($_GET['action'])) {
       case 'snows' :
           snows();
           break;
+      case 'snow' :
+          snow($_GET['code']);
+          break;
       default :
           lost();
       }
