@@ -3,6 +3,7 @@
 session_start();
 require "controller/SnowsController.php";
 require "controller/navigation.php";
+require "controller/users.php";
 
 
 if (isset($_GET['action'])) {
@@ -17,6 +18,8 @@ if (isset($_GET['action'])) {
       case 'snow' :
           snow($_GET['code']);
           break;
+      case 'login' :
+          login($_POST);
       default :
           lost();
       }
